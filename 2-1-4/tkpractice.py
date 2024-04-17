@@ -3,8 +3,11 @@
 import tkinter as tk
 #Test of button
 def test_my_button():
-    frame_auth.tkraise()
-    print("yes")
+    if(ent_username.get() == "Zach" and ent_password.get() == "isbetter"):
+        frame_auth.tkraise()
+    else:
+        fail_label = tk.Label(frame_login, text="You suck, Try again")
+        fail_label.pack()
 # main window
 root = tk.Tk()
 root.wm_geometry("200x200")
